@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3b818d0c9a72cf1206e2b9030c89a971",
+    "revision": "729a514fec717f0a744435875c8a4d8a",
     "url": "/brewery-db/index.html"
   },
   {
-    "revision": "d7ae750f93913041aad5",
-    "url": "/brewery-db/static/css/main.d3060fe4.chunk.css"
+    "revision": "dba60e600a40a5610b83",
+    "url": "/brewery-db/static/css/main.9ca01050.chunk.css"
   },
   {
     "revision": "aacd5098a913ff62f065",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/brewery-db/static/js/2.6352d002.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d7ae750f93913041aad5",
+    "revision": "dba60e600a40a5610b83",
     "url": "/brewery-db/static/js/main.5d79fff1.chunk.js"
   },
   {

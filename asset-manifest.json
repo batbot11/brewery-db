@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/brewery-db/static/css/main.d3060fe4.chunk.css",
+    "main.css": "/brewery-db/static/css/main.9ca01050.chunk.css",
     "main.js": "/brewery-db/static/js/main.5d79fff1.chunk.js",
     "main.js.map": "/brewery-db/static/js/main.5d79fff1.chunk.js.map",
     "runtime-main.js": "/brewery-db/static/js/runtime-main.adaf2832.js",
@@ -8,15 +8,15 @@
     "static/js/2.6352d002.chunk.js": "/brewery-db/static/js/2.6352d002.chunk.js",
     "static/js/2.6352d002.chunk.js.map": "/brewery-db/static/js/2.6352d002.chunk.js.map",
     "index.html": "/brewery-db/index.html",
-    "precache-manifest.d636951c7dadc8a5e7cd25015ce535f2.js": "/brewery-db/precache-manifest.d636951c7dadc8a5e7cd25015ce535f2.js",
+    "precache-manifest.1c720b498cdf977b7b72324dbec30204.js": "/brewery-db/precache-manifest.1c720b498cdf977b7b72324dbec30204.js",
     "service-worker.js": "/brewery-db/service-worker.js",
-    "static/css/main.d3060fe4.chunk.css.map": "/brewery-db/static/css/main.d3060fe4.chunk.css.map",
+    "static/css/main.9ca01050.chunk.css.map": "/brewery-db/static/css/main.9ca01050.chunk.css.map",
     "static/js/2.6352d002.chunk.js.LICENSE.txt": "/brewery-db/static/js/2.6352d002.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.adaf2832.js",
     "static/js/2.6352d002.chunk.js",
-    "static/css/main.d3060fe4.chunk.css",
+    "static/css/main.9ca01050.chunk.css",
     "static/js/main.5d79fff1.chunk.js"
   ]
 }

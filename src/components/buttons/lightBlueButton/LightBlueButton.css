@@ -1,0 +1,13 @@
+.lightbluebutton__btn {
+  background-color: #79add5;
+  border-radius: 6px;
+  width: 182px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #79add5;
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: 500;
+}

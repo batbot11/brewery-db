@@ -1,0 +1,21 @@
+.textareainput__input {
+  background-color: #e9f1f8;
+  border-radius: 4px;
+  border: 1px solid #e9f1f8;
+  border-radius: 4px;
+  width: 100%;
+  resize: none;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--brew-logix-blue);
+}
+
+.textareainput__input::placeholder {
+  color: rgba(0, 59, 113, 0.5);
+}
+
+.textareainput__input:focus,
+.textareainput__input:active {
+  outline: none;
+}

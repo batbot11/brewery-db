@@ -1,0 +1,116 @@
+.productcard__container {
+  width: 30%;
+  border-radius: 16px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.16);
+  /* margin-right: 5%; */
+  padding: 5px;
+  height: fit-content;
+  position: relative;
+  padding-top: 10px;
+  padding-left: 20px;
+  max-width: 331px;
+}
+
+.productcard__headline {
+  color: #00305d;
+  font-size: 18px;
+}
+
+.productcard__img--star {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.productcard__headline--sub {
+  font-size: 18px;
+  color: var(--brew-logix-blue);
+  font-weight: 300;
+  width: 70%;
+  line-height: 22px;
+  margin-top: 5px;
+}
+
+.productcard__associationstyle {
+  font-size: 14px;
+  color: var(--brew-logix-blue);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.productcard__img--label {
+  position: absolute;
+  width: 111px;
+}
+
+
+.productform__bitternessslider--text {
+  color: var(--brew-logix-blue);
+  font-size: 14px;
+}
+
+
+.productcard__highlights--label {
+  color: var(--brew-logix-blue);
+  font-size: 11px;
+  display: block;
+}
+
+.productcard__highlights--text {
+  color: var(--brew-logix-blue);
+  font-size: 11px;
+  display: block;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.productcard__allergy {
+  margin-left: 10%;
+  text-align: center;
+}
+
+.productcard__img--allergy {
+  margin-left: 50%;
+  transform: translateX(-50%);
+
+}
+
+.productcard__text--allergies {
+  display: block;
+  color: var(--brew-logix-blue);
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.productcard__section--heading {
+  color: var(--brew-logix-blue);
+  font-size: 18px;
+}
+
+.productcard__description--taste {
+  color: var(--brew-logix-blue);
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 5px;
+  width: 90%;
+}
+
+.productcard__bitterness--text {
+  color: var(--brew-logix-blue);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.productcard__description {
+  font-weight: 500;
+  font-size: 10px;
+  color: var(--brew-logix-blue);
+}
+
+@media only screen and (min-width: 700px) {
+  .productcard__container {
+    margin-right: 0%;
+  }
+}

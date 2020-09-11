@@ -1,0 +1,31 @@
+.textinput__container {
+  width: 45%;
+}
+
+.textinput__label {
+  color: var(--brew-logix-blue);
+  font-size: 14px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.textinput__input {
+  height: 40px;
+  border-radius: 3px;
+  background-color: #e9f1f8;
+  border: 1px solid #e9f1f8;
+  font-size: 14px;
+  width: 100%;
+  padding-left: 10px;
+  color: var(--brew-logix-blue);
+  font-weight: 500;
+}
+
+.textinput__input:active,
+.textinput__input:focus {
+  outline: none;
+}
+
+.textinput__input::placeholder {
+  color: rgba(0, 59, 113, 0.5);
+}

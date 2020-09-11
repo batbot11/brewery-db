@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  font-family: montserrat, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --brew-logix-blue: #003b71;
+  --twilight-blue: #0a406b;
+
+}

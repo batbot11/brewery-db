@@ -1,0 +1,16 @@
+.addbutton__container {
+  width: 20%;
+  text-align: center;
+}
+
+.addbutton__img {
+  cursor: pointer;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.addbutton__text {
+  font-size: 14px;
+  display: block;
+  color: var(--brew-logix-blue);
+}

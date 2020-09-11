@@ -1,0 +1,31 @@
+.glassware__container {
+  margin-left: 5%;
+  width: 77px;
+  height: 100px;
+  border: 3px solid #ffffff;
+  /* width: 58px; */
+  /* height: 90px; */
+  position: relative;
+  margin-bottom: 40px;
+
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.glassware__container.active {
+  background-color: #e9f1f8;
+  border: 3px solid var(--brew-logix-blue);
+  border-radius: 10px;
+}
+
+.glassware__text {
+  font-size: 11px;
+  color: var(--brew-logix-blue);
+  display: block;
+  position: absolute;
+  bottom: 0px;
+}
+

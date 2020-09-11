@@ -1,0 +1,41 @@
+.navbar__container {
+  height: 50px;
+  background-color: var(--brew-logix-blue);
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  display: flex;
+  color: #ffffff;
+  align-items: center;
+  padding-left: 2%;
+  z-index: 1;
+}
+
+.navbar__img--logo {
+  width: 28px;
+  height: 36px;
+}
+
+.navbar__option {
+  height: 100%;
+  margin-left: 5%;
+  display: flex;
+  align-items: center;
+  padding: 0px 25px;
+  cursor: pointer;
+}
+
+.navbar__option.active {
+  background-color: #00284d;
+}
+
+.navbar__section--user {
+  position: absolute;
+  right: 5%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  border-left: 1px solid #ffffff;
+  padding-left: 20px;
+  cursor: pointer;
+}

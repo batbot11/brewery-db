@@ -1,0 +1,131 @@
+.primaryflavornotespopup__disabled {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--brew-logix-blue);
+  opacity: .84;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.primaryflavornotespopup__container {
+  background-color: #ffffff;
+  width: 60%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 11;
+  padding-top: 20px;
+  padding-bottom: 60px;
+  border-radius: 3px;
+}
+
+.primaryflavornotespopup__heading {
+  text-align: center;
+  color: #0a406b;
+  font-size: 24px;
+  width: 90%;
+  margin-left: 5%;
+  border-bottom: 1px solid var(--brew-logix-blue);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.primaryflavornotespopup__icon--close {
+  width: 14px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.primaryflavornotespopup__note--text {
+  color: var(--brew-logix-blue);
+  font-size: 27px;
+  font-family: montserrat, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  display: block;
+  margin-top: 10px;
+}
+
+.primaryflavornotespopup__main {
+  width: 90%;
+  margin-left: 2.5%;
+  display: flex;
+  flex-flow: row wrap;
+  border-bottom: 1px solid var(--brew-logix-blue);
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+.primaryflavornotespopup__main::-webkit-scrollbar {
+  display: none;
+}
+
+.primaryflavornotespopup__img--container {
+  margin-left: 5%;
+  width: 19%;
+  border: 3px solid #ffffff;
+  cursor: pointer;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.primaryflavornotespopup__img--container.active {
+  background-color: #e9f1f8;
+  border: 3px solid var(--brew-logix-blue);
+  border-radius: 10px;
+}
+
+.primaryflavorpopup__search--container {
+  text-align: center;
+  width: 100%;
+}
+
+.primaryflavorpopup__search--text {
+  color: var(--twilight-blue);
+  font-size: 24px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.primaryflavornotespopup__btn--cancel {
+  background-color: #e9f1f8;
+  border: 1px solid #79add5;
+  font-size: 18px;
+  color: var(--brew-logix-blue);
+  width: 96px;
+  height: 45px;
+  border-radius: 3px;
+  cursor: pointer;
+  float: right;
+}
+
+.primaryflavornotespopup__btn--finish {
+  width: 96px;
+  height: 45px;
+  border-radius: 3px;
+  background-color: var(--brew-logix-blue);
+  font-size: 18px;
+  border: 1px solid #79add5;
+  color: #ffffff;
+  float: right;
+  margin-right: 5%;
+  margin-left: 5%;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 900px) {
+  .primaryflavornotespopup__img {
+    width: 100px;
+  }
+
+.primaryflavornotespopup__note--text {
+  font-size: 24px;
+}
+
+}

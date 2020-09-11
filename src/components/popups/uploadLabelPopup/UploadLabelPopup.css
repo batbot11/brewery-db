@@ -1,0 +1,68 @@
+.uploadlabelpopup__dropzone {
+  background-color: #e9f1f8;
+  border-radius: 3px;
+  width: 50%;
+  position: relative;
+}
+
+.uploadlabelpopup__dropzone::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.uploadlabelpopup__img--upload {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+  width: 30%;
+}
+
+.uploadlabelpopup__btn--browse {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--twilight-blue);
+  color: #ffffff;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+  width: 123px;
+  height: 35px;
+  border-radius: 23px;
+  top: 45%;
+  border: 1px solid var(--twilight-blue);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.uploadlabelpopup__text {
+  font-size: 18px;
+  color: var(--twilight-blue);
+  font-weight: 500;
+  position: absolute;
+}
+
+.uploadlabelpopup__file--naming {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.uploadlabelpopup__check--container {
+  width: 50px;
+  height: 50px;
+  background-color: #e9f1f8;
+  border-radius: 100%;
+  border: 1px solid #799d4b;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #799d4b;
+}
+
+.uploadlabelpopup__text--filename {
+  margin-left: 20px;
+  font-weight: 300;
+
+}

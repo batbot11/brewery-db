@@ -135,13 +135,15 @@ const ProductCard = ({
         </div>
       </div>
 
-      <div className="productcard__section--heading">Tasting Notes</div>
+      {/* Tasting Notes not in scope */}
+      
+      {/* <div className="productcard__section--heading">Tasting Notes</div>
 
       <p className="productcard__description--taste">
         {productData.tasteDescription}
-      </p>
+      </p> */}
 
-      <div
+      {/* <div
         style={{ marginTop: "40px" }}
         className="productcard__section--heading"
       >
@@ -158,7 +160,7 @@ const ProductCard = ({
           className="productform__slider--bitterness"
           value={productData.bitterness}
         />
-      </div>
+      </div> */}
 
       <div
         style={{ marginTop: "40px" }}

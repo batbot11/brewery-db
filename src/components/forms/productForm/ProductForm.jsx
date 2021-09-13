@@ -21,7 +21,7 @@ const ProductForm = ({
   selectedHintNotes,
   setSelectedHintNotes,
   selectedGlasswares,
-  setSelectedGlasswares
+  setSelectedGlasswares,
 }) => {
   // Refs
 
@@ -42,7 +42,7 @@ const ProductForm = ({
 
   // Functions
 
-  const validate = name => {
+  const validate = (name) => {
     const object = { ...errors };
 
     switch (name) {
@@ -57,7 +57,7 @@ const ProductForm = ({
     setErrors(object);
   };
 
-  const changeThumbColor = value => {
+  const changeThumbColor = (value) => {
     const number = Number(value);
     const element = document.getElementById("range-srm");
     if (number < 10) {
@@ -110,7 +110,7 @@ const ProductForm = ({
     }
   };
 
-  const decideSrmColor = srmString => {
+  const decideSrmColor = (srmString) => {
     let hexColor = "";
     const srmValue = Number(srmString);
     switch (srmValue) {
@@ -242,7 +242,7 @@ const ProductForm = ({
     return hexColor;
   };
 
-  const onGlasswareClick = text => {
+  const onGlasswareClick = (text) => {
     const index = selectedGlasswares.indexOf(text);
     let array = [...selectedGlasswares];
     if (index === -1) {
@@ -257,13 +257,13 @@ const ProductForm = ({
 
   const booleanOptions = [
     { label: "Yes", value: true },
-    { label: "No", value: false }
+    { label: "No", value: false },
   ];
 
   const availabilityOptions = [
     { label: "Year Round", value: "yearRound" },
     { label: "Seasonal or Limited", value: "limited" },
-    { label: "Archived", value: "archived" }
+    { label: "Archived", value: "archived" },
   ];
 
   const allergyOptions = [
@@ -271,7 +271,7 @@ const ProductForm = ({
     { label: "Nuts", value: "nuts" },
     { label: "Eggs", value: "eggs" },
     { label: "Gluten", value: "gluten" },
-    { label: "None", value: "none" }
+    { label: "None", value: "none" },
   ];
 
   const servingTempOptions = [
@@ -280,7 +280,7 @@ const ProductForm = ({
     { label: "Cool - (8-12C/45-54F)", value: "cool" },
     { label: "Cellar - (12-14C/54-57F)", value: "cellar" },
     { label: "Warm - (14-16C/57-61F)", value: "warm" },
-    { label: "Hot - upto(70C/158F)", value: "hot" }
+    { label: "Hot - upto(70C/158F)", value: "hot" },
   ];
 
   console.log("srm color", srmColor);
@@ -291,7 +291,7 @@ const ProductForm = ({
         <PrimaryFlavorNotesPopup
           onCloseClick={() => setShowPrimaryFlavorPopup(false)}
           heading="Primary Flavor Notes"
-          onSubmit={array => setSelectedPrimaryNotes(array)}
+          onSubmit={(array) => setSelectedPrimaryNotes(array)}
         />
       )}
 
@@ -299,20 +299,20 @@ const ProductForm = ({
         <PrimaryFlavorNotesPopup
           onCloseClick={() => setShowHintsPopup(false)}
           heading={<span>&#8220;Hints of&#8221; Flavor Notes</span>}
-          onSubmit={array => setSelectedHintNotes(array)}
+          onSubmit={(array) => setSelectedHintNotes(array)}
         />
       )}
 
       {showUploadLabelPopup && (
         <UploadLabelPopup
           onCloseClick={() => setShowUploadLabelPopup(false)}
-          onSubmit={file => setLabelFile(file)}
+          onSubmit={(file) => setLabelFile(file)}
         />
       )}
 
       <input
         style={{ display: "none" }}
-        onChange={e => setLabelFile(e.target.files[0])}
+        onChange={(e) => setLabelFile(e.target.files[0])}
         type="file"
         ref={labelInput}
       />
@@ -323,7 +323,7 @@ const ProductForm = ({
 
         <div className="productform__section">
           <TextInput
-            onChange={value => onChange("name", value)}
+            onChange={(value) => onChange("name", value)}
             label="Product Name"
             placeholder="Enter Product Name"
             value={productData.name}
@@ -333,7 +333,7 @@ const ProductForm = ({
           <SelectInput
             label="Is This a New Product"
             options={booleanOptions}
-            onChange={value => {
+            onChange={(value) => {
               console.log("is new product", value);
               onChange("isNewProduct", value);
             }}
@@ -344,13 +344,13 @@ const ProductForm = ({
 
         <div className="productform__section">
           <TextInput
-            onChange={value => onChange("abv", value)}
+            onChange={(value) => onChange("abv", value)}
             label="ABV"
             placeholder="Enter ABV"
             value={productData.abv}
           />
           <TextInput
-            onChange={value => onChange("ibu", value)}
+            onChange={(value) => onChange("ibu", value)}
             label="IBU"
             placeholder="Enter IBU"
             value={productData.ibu}
@@ -362,21 +362,21 @@ const ProductForm = ({
             value={productData.availability}
             label="Availability"
             options={availabilityOptions}
-            onChange={value => onChange("availability", value)}
+            onChange={(value) => onChange("availability", value)}
           />
           <div style={{ width: "45%" }}>
             <div
               style={{
                 display: "flex",
                 alignItems: "center",
-                marginBottom: "47px"
+                marginBottom: "47px",
               }}
             >
               <label className="textinput__label">SRM</label>
               <div style={{ marginLeft: "20px" }}>
                 <input
                   value={productData.srm}
-                  onChange={e => onChange("srm", e.target.value)}
+                  onChange={(e) => onChange("srm", e.target.value)}
                   type="text"
                   className="productform__srm--input"
                 />
@@ -393,7 +393,7 @@ const ProductForm = ({
               class="productform__slider--srm"
               id="range-srm"
               value={productData.srm}
-              onChange={e => {
+              onChange={(e) => {
                 changeThumbColor(e.target.value);
                 onChange("srm", e.target.value);
                 decideSrmColor(e.target.value);
@@ -410,13 +410,13 @@ const ProductForm = ({
             options={booleanOptions}
             value={productData.isGlutenFree}
             label="Gluten Free?"
-            onChange={value => onChange("isGlutenFree", value)}
+            onChange={(value) => onChange("isGlutenFree", value)}
           />
           <SelectInput
             options={booleanOptions}
             value={productData.isOrganic}
             label="Certifies Organic?"
-            onChange={value => onChange("isOrganic", value)}
+            onChange={(value) => onChange("isOrganic", value)}
           />
         </div>
 
@@ -425,13 +425,13 @@ const ProductForm = ({
             options={booleanOptions}
             value={productData.isNonAlcoholic}
             label="Non-Alcoholic"
-            onChange={value => onChange("isNonAlcoholic", value)}
+            onChange={(value) => onChange("isNonAlcoholic", value)}
           />
           <MultiSelectInput
             label="Allergy Warnings"
             options={allergyOptions}
             value={productData.allergyWarnings}
-            onChange={values => {
+            onChange={(values) => {
               if (values.length > 1) {
                 const index = values.indexOf("none");
                 if (index !== -1) {
@@ -452,7 +452,7 @@ const ProductForm = ({
           style={{
             display: "flex",
             justifyContent: "center",
-            paddingTop: "20px"
+            paddingTop: "20px",
           }}
         >
           {productData.label.length > 0 && (
@@ -476,7 +476,7 @@ const ProductForm = ({
               style={{
                 backgroundColor: "#e9f1f8",
                 border: "2px solid rgba(121, 173, 213, 0.2)",
-                height: "80px"
+                height: "80px",
               }}
               className="productform__img--label"
             />
@@ -501,7 +501,7 @@ const ProductForm = ({
         </div>
 
         <TextInput
-          onChange={value => onChange("associationStyle", value)}
+          onChange={(value) => onChange("associationStyle", value)}
           style={{ width: "90%" }}
           label=""
           value={productData.associationStyle}
@@ -512,7 +512,7 @@ const ProductForm = ({
             label="Custom Style Name (optional)"
             placeholder="Enter Custom Style Name"
             style={{ width: "90%" }}
-            onChange={value => onChange("customStyleName", value)}
+            onChange={(value) => onChange("customStyleName", value)}
             value={productData.customStyleName}
           />
         </div>
@@ -523,24 +523,31 @@ const ProductForm = ({
         <TextAreaInput
           style={{ width: "91%", marginTop: "20px" }}
           label="Describe the tasting experience"
-          onChange={value => onChange("tasteDescription", value)}
+          onChange={(value) => onChange("tasteDescription", value)}
           value={productData.tasteDescription}
         />
 
         {/* Percieved Bitterness */}
-        <div className="productform__heading">Percieved Bitterness</div>
+        {/* <div className="productform__heading">Percieved Bitterness</div>
 
         <span className="productform__bitternessslider--text">
           Slide the Hop to the Appropriate Percieved Bitterness
-        </span>
+        </span> */}
 
-        <div>
+        {/* <div style={{ position: "relative" }}>
           <input
             id="range-bitterness"
             type="range"
             className="productform__slider--bitterness"
             value={productData.bitterness}
-            onChange={e => onChange("bitterness", e.target.value)}
+            onChange={(e) => onChange("bitterness", e.target.value)}
+          />
+
+          <img
+            src="https://w1.pngwing.com/pngs/698/1005/png-transparent-green-circle-herb-food-obat-tradisional-health-medicinal-plants-curcumin-extract-wang-noi-district-thailand-thumbnail.png"
+            alt="flower"
+            className="productform__slider--bitterness--flower"
+            style={{ left: `${productData.bitterness}%` }}
           />
 
           <div className="productform__bitterness--text-range">
@@ -551,7 +558,7 @@ const ProductForm = ({
             <span>Powerful</span>
           </div>
         </div>
-
+ */}
         {/* Primary Flavor Notes */}
         <div
           style={{ marginTop: "40px", marginBottom: "20px" }}
@@ -561,7 +568,7 @@ const ProductForm = ({
         </div>
 
         <div style={{ display: "flex" }}>
-          {selectedPrimaryNotes.map(note => (
+          {selectedPrimaryNotes.map((note) => (
             <div className="productform__note--container">
               <img
                 className="productform__note--img"
@@ -583,7 +590,7 @@ const ProductForm = ({
         </div>
 
         <div style={{ display: "flex" }}>
-          {selectedHintNotes.map(note => (
+          {selectedHintNotes.map((note) => (
             <div className="productform__note--container">
               <img
                 className="productform__note--img"
@@ -611,7 +618,7 @@ const ProductForm = ({
           new pilsener beer named Champagne Velvet. Over the next 50 years it grew 
           to become one of Indiana’s most popular beers, a go-to for many of our 
           grandparents and great-grandparents..."
-          onChange={value => onChange("productDescription", value)}
+          onChange={(value) => onChange("productDescription", value)}
           value={productData.productDescription}
         />
 
@@ -623,7 +630,7 @@ const ProductForm = ({
             color: "var(--brew-logix-blue)",
             fontSize: "14px",
             marginTop: "20px",
-            display: 'block'
+            display: "block",
           }}
         >
           Glassware (Change SRM to change Glassware color)
@@ -645,14 +652,14 @@ const ProductForm = ({
           label="Suggest Serving Temperature"
           options={servingTempOptions}
           value={productData.suggestedServingTemp}
-          onChange={value => onChange("suggestedServingTemp", value)}
+          onChange={(value) => onChange("suggestedServingTemp", value)}
         />
 
         <TextInput
           style={{ marginTop: "40px", width: "50%" }}
           label="Suggest Appropriate Food Pairings"
           value={productData.suggestedFoodPairing}
-          onChange={value => onChange("suggestedFoodPairing", value)}
+          onChange={(value) => onChange("suggestedFoodPairing", value)}
         />
 
         <LightBlueButton
@@ -670,7 +677,7 @@ const ProductForm = ({
             <TextInput
               style={{ width: "100%", marginBottom: "20px" }}
               label="Yeasts"
-              onChange={value => onChange("yeasts", value)}
+              onChange={(value) => onChange("yeasts", value)}
               value={productData.yeasts}
             />
             <LightBlueButton text="Add Yeasts" />
@@ -680,7 +687,7 @@ const ProductForm = ({
             <TextInput
               style={{ width: "100%", marginBottom: "20px" }}
               label="Hops"
-              onChange={value => onChange("hops", value)}
+              onChange={(value) => onChange("hops", value)}
               value={productData.hops}
             />
             <LightBlueButton text="Add Hops" />
@@ -689,7 +696,7 @@ const ProductForm = ({
 
         <TextInput
           value={productData.malts}
-          onChange={value => onChange("malts", value)}
+          onChange={(value) => onChange("malts", value)}
           style={{ marginTop: "40px" }}
           label="Malts"
         />
@@ -705,7 +712,7 @@ const ProductForm = ({
               width: "217px",
               height: "50px",
               fontSize: "18px",
-              backgroundColor: "#799d4b"
+              backgroundColor: "#799d4b",
             }}
             text="Save and Continue"
           />
@@ -725,7 +732,7 @@ ProductForm.propTypes = {
   setSelectedHintNotes: PropTypes.func,
   labelFile: PropTypes.any,
   selectedGlasswares: PropTypes.array,
-  setSelectedGlasswares: PropTypes.func
+  setSelectedGlasswares: PropTypes.func,
 };
 
 export default ProductForm;

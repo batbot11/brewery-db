@@ -16,6 +16,7 @@ import {
 } from "../../redux/actions/cardCreation";
 
 const CardCreationPage = props => {
+  // States
   const [productData, setProductData] = useState(props.formData);
 
   const [labelFile, setLabelFile] = useState(props.labelFile);
@@ -25,6 +26,8 @@ const CardCreationPage = props => {
   const [selectedHintNotes, setSelectedHintNotes] = useState(props.hintNotes);
 
   const [selectedGlasswares, setSelectedGlasswares] = useState(props.glasswares);
+
+  // Effects
 
   useEffect(() => {
     props.setFormData(productData);
@@ -51,6 +54,8 @@ const CardCreationPage = props => {
     setProductData(object);
   };
 
+  // Console Logs
+  
   // console.log('props inside page', props);
   console.log("product data", productData);
 
@@ -98,27 +103,6 @@ const CardCreationPage = props => {
         />
       </div>
 
-      {/* <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          width: "50%"
-        }}
-      >
-        <LightBlueButton
-          style={{ width: "217px", height: "50px", fontSize: "18px" }}
-          text="Exit"
-        />
-        <LightBlueButton
-          style={{
-            width: "217px",
-            height: "50px",
-            fontSize: "18px",
-            backgroundColor: "#799d4b"
-          }}
-          text="Save and Continue"
-        />
-      </div> */}
     </div>
   );
 };
